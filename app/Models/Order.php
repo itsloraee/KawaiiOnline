@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    //
+    use HasFactory;
+
+    protected $table = 'lines';
+
+    protected $fillable = [
+        'user_id',
+        'prix',
+        'state',
+    ];
 }
